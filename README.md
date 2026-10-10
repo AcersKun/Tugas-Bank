@@ -1,4 +1,4 @@
-# Tugas PBO - Aplikasi Perbankan Sederhana
+# Tugas PBO - Tugas Bank
 
 Aplikasi perbankan berbasis Java yang menerapkan konsep Pemrograman Berbasis Objek dengan class `Bank`, `Nasabah`, dan `Rekening`.
 
