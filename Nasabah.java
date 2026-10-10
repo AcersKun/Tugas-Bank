@@ -1,40 +1,37 @@
-public class Customer {
-    private String firstName;
-    private String lastName;
-    private akun[] accounts = new akun[5]; // Array dengan kapasitas 5
-    private int numberOfAccounts = 0;
+public class Nasabah {
+    private String namaDepan;
+    private String namaBelakang;
+    private Rekening[] daftarRekening = new Rekening[10];
+    private int jumlahRekening = 0;
 
-    // Konstruktor
-    public Customer(String f, String l) {
-        this.firstName = f;
-        this.lastName = l;
+    public Nasabah(String depan, String belakang) {
+        this.namaDepan = depan;
+        this.namaBelakang = belakang;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getnamaDepan() {
+        return namaDepan;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getnamaBelakang() {
+        return namaBelakang;
     }
 
-    // Menambahkan akun ke dalam array
-    public void setAccount(akun acct) {
-        if (numberOfAccounts < accounts.length) {
-            accounts[numberOfAccounts++] = acct;
+    // Menambahkan rekening baru
+    public void tambahRekening(Rekening rekeningBaru) {
+        if (jumlahRekening < daftarRekening.length) {
+            daftarRekening[jumlahRekening++] = rekeningBaru;
         }
     }
 
-    // Mengambil akun berdasarkan indeks
-    public akun getAccount(int account_index) {
-        if (account_index >= 0 && account_index < numberOfAccounts) {
-            return accounts[account_index];
+    public Rekening getAccount(int indeks) {
+        if (indeks >= 0 && indeks < jumlahRekening) {
+            return daftarRekening[indeks];
         }
         return null;
     }
 
-    // Mengambil jumlah akun saat ini
-    public int getNumOfAccounts() {
-        return numberOfAccounts;
+    public int getJumlahRekening() {
+        return jumlahRekening;
     }
 }

@@ -1,34 +1,29 @@
-public class akun {
-    // Atribut private untuk menyimpan saldo
-    private double balance;
+public class Rekening {
+    private double saldo;
 
-    // Kontruktor untuk inisialisasi saldo awal
-    public akun(double init_balance) {
-        if (init_balance > 0.0) {
-            this.balance = init_balance;
+    public Rekening(double saldoAwal) {
+        if (saldoAwal > 0.0) {
+            this.saldo = saldoAwal;
         } else {
-            this.balance = 0.0;
+            this.saldo = 0.0;
         }
     }
 
-    // Method getter untuk mengembalikan saldo saat ini
-    public double getBalance() {
-        return balance;
+    public double getSaldo() {
+        return saldo;
     }
 
-    // Method untuk menambah saldo (deposit)
-    public boolean deposit(double amt) {
-        if (amt > 0) {
-            balance += amt;
+    public boolean setorUang(double jumlah) {
+        if (jumlah > 0) {
+            saldo += jumlah;
             return true;
         }
         return false;
     }
 
-    // Method untuk menarik saldo (withdraw)
-    public boolean withdraw(double amt) {
-        if (amt <= balance) {
-            balance -= amt;
+    public boolean tarikUang(double jumlah) {
+        if (jumlah <= saldo) {
+            saldo -= jumlah;
             return true;
         }
         return false;
